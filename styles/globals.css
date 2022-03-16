@@ -1,7 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .activities-text {
+        @apply text-sm py-1 px-2 rounded-lg;
+    }
+}
+:root {
+    --primary-Light-red-work: 255 140 102;
+    --primary-Soft-blue-play: 86 194 230;
+    --primary-Light-red-study: 255 92 95;
+    --primary-Lime-green-exercise: 89 207 138;
+    --primary-Violet-social: 117 54 211;
+    --primary-Soft-orange-self-care: 241 198 91;
+
+    --neutral-Very-dark-blue: 15 20 36;
+    --neutral-Dark-blue: 28 31 74;
+    --neutral-Desaturated-blue: 111 118 200;
+    --neutral-Pale-Blue: 189 193 255;
+}
+
 html,
 body {
     padding: 0;
     margin: 0;
+    font-size: 18px;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
         Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -14,6 +38,3 @@ a {
 * {
     box-sizing: border-box;
 }
-@tailwind base;
-@tailwind components;
-@tailwind utilities;

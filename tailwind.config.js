@@ -12,6 +12,7 @@ module.exports = {
         extend: {
             colors: {
                 primary: {
+                    blue: withOpacityValue("--primary-Blue"),
                     work_theme: withOpacityValue("--primary-Light-red-work"),
                     play_theme: withOpacityValue("--primary-Soft-blue-play"),
                     study_theme: withOpacityValue("--primary-Light-red-study"),

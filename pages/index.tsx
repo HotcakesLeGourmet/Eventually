@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import TrackerCard from "../components/TrackerCard";
+import UserCard from "../components/UserCard";
 import { getData } from "../hooks/useData";
 
 const Home: NextPage = () => {
@@ -10,7 +11,8 @@ const Home: NextPage = () => {
     }, []);
     return (
         <div className="flex justify-center">
-            <div className="flex flex-col w-8/12">
+            <div className="flex flex-col gap-y-8 w-[330px] my-8">
+                <UserCard />
                 {data.map((tracker) => (
                     <TrackerCard data={tracker} />
                 ))}

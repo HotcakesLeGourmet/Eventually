@@ -28,7 +28,7 @@ function TrackerCard({ data = sample }) {
                     alt="Icon for task"
                 />
             </div>
-            <div className="w-full text-center text-white bg-neutral-dark_blue rounded-2xl h-[80%]  absolute z-10 -left-[.1%] top-1/4">
+            <div className=" hover:bg-neutral-very_dark_blue/80 w-full text-center text-white bg-neutral-dark_blue rounded-2xl h-[80%]  absolute z-10 -left-[.1%] top-1/4">
                 <div className="flex justify-around items-center h-full">
                     <div className=" flex flex-col text-left">
                         <div className=" font-medium ">{data.title}</div>

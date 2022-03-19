@@ -10,9 +10,9 @@ const Home: NextPage = () => {
         getData(setData);
     }, []);
     return (
-        <div className="flex justify-center">
+        <div className="flex  flex-col items-center">
+            <UserCard />
             <div className="flex flex-col gap-y-8 w-[330px] my-8">
-                <UserCard />
                 {data.map((tracker) => (
                     <TrackerCard data={tracker} />
                 ))}

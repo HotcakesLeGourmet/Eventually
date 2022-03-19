@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
+import { text } from "stream/consumers";
 
 function UserCard() {
+    const defaultView = {
+        Daily: false,
+        Weekly: false,
+        Monthly: false,
+    };
+    const [selectedView, setselectedView] = useState(defaultView);
+    const onSectionClick = (e: any) => {
+        const activeView = e.target.value;
+        setselectedView({ ...defaultView, [activeView]: true });
+    };
     return (
-        <div className="">
+        <div className="sm: w-[330px] mt-4">
             <div className="flex flex-col h-44  bg-neutral-dark_blue rounded-2xl relative">
                 <div className=" flex justify-center items-center w-full text-center bg-primary-blue text-white rounded-2xl h-4/6 z-10">
                     <div className="grid grid-cols-3 grid-rows-2 gap-x-4 text-left">
@@ -20,9 +31,27 @@ function UserCard() {
                     </div>
                 </div>
                 <div className="flex justify-around flex-grow  items-center text-neutral-pale_blue">
-                    <div>Daily</div>
-                    <div className=" text-white">Weekly</div>
-                    <div>Monthly</div>
+                    <button
+                        onClick={(e) => onSectionClick(e)}
+                        className={` hover:text-white  ${selectedView.Daily ? "text-white" : ""}`}
+                        value="Daily"
+                    >
+                        Daily
+                    </button>
+                    <button
+                        onClick={(e) => onSectionClick(e)}
+                        className={` hover:text-white ${selectedView.Weekly ? "text-white" : ""}`}
+                        value="Weekly"
+                    >
+                        Weekly
+                    </button>
+                    <button
+                        onClick={(e) => onSectionClick(e)}
+                        className={` hover:text-white  ${selectedView.Monthly ? "text-white" : ""}`}
+                        value="Monthly"
+                    >
+                        Monthly
+                    </button>
                 </div>
             </div>
         </div>

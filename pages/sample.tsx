@@ -1,6 +1,7 @@
+import { NextPage } from "next";
 import React from "react";
 
-function sample() {
+const sample: NextPage = () => {
     return (
         <>
             <div className="flex flex-col h-screen justify-center">
@@ -25,6 +26,6 @@ function sample() {
             </div>
         </>
     );
-}
+};
 
 export default sample;

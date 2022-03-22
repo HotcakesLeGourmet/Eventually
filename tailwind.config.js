@@ -27,6 +27,16 @@ module.exports = {
                     pale_blue: withOpacityValue("--neutral-Pale-Blue"),
                 },
             },
+            animation: {
+                "single-pulse": "pulsos 1s linear 1",
+            },
+            keyframes: {
+                pulsos: {
+                    "0%": { opacity: 0 },
+                    "50%": { opacity: 0.5 },
+                    "100%": { opacity: 1 },
+                },
+            },
         },
     },
     plugins: [],

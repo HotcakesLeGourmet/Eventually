@@ -8,6 +8,9 @@
     .activities-text {
         @apply text-sm py-1 px-2 rounded-lg;
     }
+    .my-anime {
+        transition: width 2s, height 4s;
+    }
 }
 
 :root {

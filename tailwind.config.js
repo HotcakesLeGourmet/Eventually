@@ -28,14 +28,20 @@ module.exports = {
                 },
             },
             animation: {
-                "single-pulse": "pulsos 1s linear 1",
+                "single-pulse": "fadeInText 1s linear 1",
+                "deleting-track": "fadeOutTrack 1s linear 1"
             },
             keyframes: {
-                pulsos: {
+                fadeInText: {
                     "0%": { opacity: 0 },
                     "50%": { opacity: 0.5 },
                     "100%": { opacity: 1 },
                 },
+                fadeOutTrack : {
+                    "0%": { opacity: 1 },
+                    "50%": { opacity: 0.5 },
+                    "95%": { opacity: 0 },
+                }
             },
         },
     },

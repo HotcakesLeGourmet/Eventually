@@ -6,9 +6,9 @@ export const getData = () => {
         const response = await axios.get("data.json");
         if (localStorage.getItem("tracks")) {
             setData(JSON.parse(localStorage.getItem("tracks") as string));
-            console.log("exists");
+            ;
         } else {
-            console.log(" doesnt exists");
+            ;
             localStorage.setItem("tracks", JSON.stringify(response.data));
             const data = await JSON.parse(localStorage.getItem("tracks") as string);
             setData(data);
@@ -19,7 +19,7 @@ export const getData = () => {
         try {
             fetchData();
         } catch (error) {
-            console.log(error);
+            ;
         }
     }, [setData]);
 

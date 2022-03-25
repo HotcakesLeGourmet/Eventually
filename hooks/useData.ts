@@ -19,7 +19,7 @@ export const getData = () => {
         try {
             fetchData();
         } catch (error) {
-            ;
+           console.log(error)
         }
     }, [setData]);
 

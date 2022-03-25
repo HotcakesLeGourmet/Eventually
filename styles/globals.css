@@ -6,7 +6,7 @@
 
 @layer components {
     .activities-text {
-        @apply text-sm py-1 px-2 rounded-lg;
+        @apply text-sm py-1 px-2 rounded-lg lg:text-lg flex items-center justify-center w-20  md:w-full;
     }
     .my-anime {
         transition: width 2s, height 4s;

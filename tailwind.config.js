@@ -43,6 +43,10 @@ module.exports = {
                     "95%": { opacity: 0 },
                 }
             },
+            screens: {
+                'md': '660px',
+                // => @media (min-width: 992px) { ... }
+              },
         },
     },
     plugins: [],

@@ -2,7 +2,6 @@ import "../styles/globals.css";
 import { useEffect, useState } from "react";
 import type { AppProps } from "next/app";
 import { AllTracks, CurrentView } from "../context/store";
-import GlobalStateProvider from "../components/GlobalStateProvider";
 import { getData } from "../hooks/useData";
 function MyApp({ Component, pageProps }: AppProps) {
     const [view, setView] = useState("weekly");
